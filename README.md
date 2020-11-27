@@ -93,3 +93,30 @@ public class Solution {
 1. Сначала мы узнаем длину строки и инициализируем наш HashSet
 2. Подготавливаем переменные ans -- ответ
 3. а дальше я сам не понимаю если честно
+
+
+
+### **Задача 7 Развернуть число**
+
+Вроде простейшая задача, но тут литкод выдал, что решение эффективнее 100 процентов решений. 
+
+Решение даже стыдно объяснять, пожтому просто пусть будет здесь 
+
+```java
+class Solution {
+    public int reverse(int x) {
+        long result = 0;
+        
+        while (x != 0){
+            result = result*10 + (x % 10);
+            x = x/10;
+        }
+        
+        if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE){
+            return 0;
+        }
+        return (int)result;
+    }
+}
+```
+
